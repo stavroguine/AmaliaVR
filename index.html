@@ -3,24 +3,49 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title></title>
+        <title>AmaliaVR</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="css/normalize.css">
-        <link rel="stylesheet" href="css/main.css">
         <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
+
+
+
     </head>
     <body>
-        <!--[if lte IE 9]>
-            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
-        <![endif]-->
 
+    <a-scene>
+        <!-- ASSETS -->
+        <a-assets>
+            <img src="assets/play.png" id="icon_play" crossorigin="anonymous">
+            <img src="assets/pause.png" id="icon_pause" crossorigin="anonymous">
+            <img id="sky" src="assets/background_elements.png">
+        </a-assets>
+        <a-assets>
+            <video id="test" autoplay loop="true" src="assets/small.mp4"></video>
+        </a-assets>
+        <!-- END ASSETS-->
+        <!--VIDEO-->
+        <!--<a-video src="#test" id="amalia"  width="32" height="18" position="0 0 -20"></a-video>-->
+        <!--<a-videosphere src="img/small.mp4"></a-videosphere>-->
+        <!--END VIDEO-->
+        <!-- CONTROLS -->
+        <a-image id="play" width="3" height="3" src="#icon_play" position="0 0.6 -6"></a-image>
+        <a-image id="play" width="3" height="3" src="#icon_pause" position="0 0.6 -6"></a-image>
+        <!--END CONTROLS-->
+        <!-- PROGRESSBAR -->
+        <a-entity id="progress-bar" geometry="primitive: plane; width: 4; height: 0.06;"
+                  material="transparent: true; visible:true; opacity: 0;" position="0 0.1 -6">
+            <a-plane id="progress-bar-track" width="4" height="0.06" color="black" position="0 0 0.005" opacity="0.2" visible="true"></a-plane>
+            <a-plane id="progress-bar-fill" width="0" height="0.06" color="#7198e5" position="-2 0 0.01" visible="true"></a-plane>
+        </a-entity>
+            <!-- END PROGRESSBAR -->
 
-        <p>Hello world! This is HTML5 Boilerplate.</p>
-        <script src="js/vendor/modernizr-3.5.0.min.js"></script>
-        <script src="js/vendor/jquery-3.2.1.min.js"></script>
+        <a-sky src="#sky"></a-sky>
+
         <script src="js/main.js"></script>
 
+    </a-scene>
 
     </body>
+
 </html>
