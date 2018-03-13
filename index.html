@@ -7,9 +7,9 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
-
-
-
+        <script src="//cdn.rawgit.com/donmccurdy/aframe-physics-system/v2.1.0/dist/aframe-physics-system.min.js"></script>
+        <script src="https://unpkg.com/super-hands@2.0.2/dist/super-hands.min.js"></script>
+        <script src="https://unpkg.com/aframe-physics-extras@0.1.2/dist/aframe-physics-extras.min.js"></script>
     </head>
     <body>
 
@@ -30,7 +30,7 @@
         <!--END VIDEO-->
         <!-- CONTROLS -->
         <a-image id="play" width="3" height="3" src="#icon_play" position="0 0.6 -6"></a-image>
-        <a-image id="play" width="3" height="3" src="#icon_pause" position="0 0.6 -6"></a-image>
+        <a-image id="pause" width="3" height="3" src="#icon_pause" position="0 0.6 -6"></a-image>
         <!--END CONTROLS-->
         <!-- PROGRESSBAR -->
         <a-entity id="progress-bar" geometry="primitive: plane; width: 4; height: 0.06;"
